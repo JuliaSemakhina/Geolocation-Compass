@@ -1,89 +1,44 @@
- @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Texturina:wght@100;400&display=swap');
 
  html {
     color: black;
-    font-family: sans-serif;
   }
 
-  body {
-    margin: 0;
-    font-family: 'Architects Daughter', cursive;
-    background-color:  rgb(101, 220, 64);
-  }
+body {
+      margin: 0;
+      font-family: 'Texturina', serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background:
+        radial-gradient(black 15%, transparent 16%) 0 0,
+        radial-gradient(black 15%, transparent 16%) 8px 8px,
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+      background-color: #547855;
+      background-size: 16px 16px;
+      background-attachment: fixed;
+    }
 
-  .game{
-    width: 600px;
-    height: 400px;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-  }
+.arrow {
+  width: 250px;
+  overflow: hidden;
+  transition: all 0.2s;
+  transform: rotate(0deg);
+  display: inline-block;
+}
 
-  h1 {
-    text-align: center;
-    font-size: 3rem;
-    color: #503335;
-  }
-
-  .score {
-    background-color: #34c240;
-    padding: 0 1em;
-    line-height: 1;
-    border-radius: 1rem;
-  }
-
-  button {
-    background-color: #d64242;
-    height: 50px;
-    width: 110px;
-    outline: none;
-    border-radius: 6%;
-    border: none;
-    color: #fff;
-    font-size: 1rem;
-  }
-
-  button:hover {
-    background-color: rgba(214, 66, 66, .65);
-    color: #503335;
-    font-weight: bold;
-  }
-
-  .hole {
-    flex: 1 0 33.33%;
-    overflow: hidden;
-    position: relative;
-  }
-
-  .hole:after {
-    display: block;
-    background: url(dirt.png) bottom center no-repeat;
-    background-size: contain;
-    content: '';
-    width: 100%;
-    height: 80px;
-    position: absolute;
-    z-index: 2;
-    bottom: -30px;
-  }
-
-  .mole {
-    background: url('mole.png') bottom center no-repeat;
-    background-size: 50%;
-    position: absolute;
-    top: 100%;
-    width: 90%;
-    height: 90%;
-    transition: all 0.4s;
-  }
-
-  .hole.up .mole {
-    top: 0;
-  }
-
-.container {
+h1 {
+  color: #fff;
+  font-family: 'Texturina', serif;
+  font-weight: bold;
+  font-size: 60px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+}
+
+.units {
+  font-size: 15px;
 }
